@@ -1,5 +1,8 @@
 Acme::POE::Acronym::Generator
 =============================
 
+1.00	Thu Apr 05 16:08:48 BST 2007
+	- Added wordlist option.
+
 0.99	Thu Apr 05 15:15:15 BST 2007
 	- Initial public release.

@@ -4,7 +4,7 @@ use strict;
 use Math::Random;
 use vars qw($VERSION);
 
-$VERSION = '0.99';
+$VERSION = '1.00';
 
 sub new {
   my $package = shift;
@@ -12,6 +12,14 @@ sub new {
   $opts{lc $_} = delete $opts{$_} for keys %opts;
   $opts{dict} = '/usr/share/dict/words' unless $opts{dict};
   my $self = bless \%opts, $package;
+  if ( $opts{wordlist} and ref $opts{wordlist} eq 'ARRAY' ) {
+	for ( @{ $opts{wordlist} } ) {
+	   chomp;
+	   next unless /^[poe]\w+$/;
+	   push @{ $self->{words}->{ substr($_,0,1) } }, $_;
+	}
+	return $self;
+  }
   if ( -e $opts{dict} ) {
 	open my $fh, "<", $self->{dict} or die "$!\n";
 	while (<$fh>) {
@@ -72,9 +80,10 @@ Acme::POE::Acronym::Generator produces randomly generated expansions of the POE 
 
 =item new
 
-Takes one optional parameter:
+Takes two optional parameters:
 
   'dict', the path to the words file to use, default is /usr/share/dict/words;
+  'wordlist', an arrayref consisting of words to use, this overrides the use of dict file;
 
 If the dict file doesn't exist it will use a very small subset of words to generate responses.
 
