@@ -1,7 +1,7 @@
 ---
 author: 'Chris Williams <chris@bingosnet.co.uk>'
 distribution_type: module
-generated_by: Module::Install version 0.65
+generated_by: Module::Install version 0.67
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.3.html
@@ -13,4 +13,4 @@ no_index:
     - t
 requires:
   Math::Random: 0.69
-version: 1.00
+version: 1.01

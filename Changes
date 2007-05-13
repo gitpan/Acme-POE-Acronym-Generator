@@ -1,6 +1,10 @@
 Acme::POE::Acronym::Generator
 =============================
 
+1.01	Sun May 13 12:19:47 BST 2007
+	- Applied a patch from cfedde to enable acronymisation of any
+	  given word.
+
 1.00	Thu Apr 05 16:08:48 BST 2007
 	- Added wordlist option.
 

@@ -17,6 +17,7 @@ t/00_use.t
 t/01_acronym.t
 t/02_fakedict.t
 t/03_wordlist.t
+t/04_cfedde_key.t
 t/99_pod.t
 t/99_pod_coverage.t
 t/99_test_kwalitee.t
