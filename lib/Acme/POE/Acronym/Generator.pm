@@ -4,7 +4,7 @@ use strict;
 use Math::Random;
 use vars qw($VERSION);
 
-$VERSION = '1.01';
+$VERSION = '1.02';
 
 sub new {
   my $package = shift;
@@ -12,6 +12,7 @@ sub new {
   $opts{lc $_} = delete $opts{$_} for keys %opts;
   $opts{dict} = '/usr/share/dict/words' unless $opts{dict};
   $opts{key} =~ s/[^A-Za-z]//g if $opts{key};
+  $opts{key} = lc $opts{key} if $opts{key};
   my $self = bless \%opts, $package;
 
   $self->{poe} = [ $opts{key}? split( //, $opts{key} ) : qw(p o e) ];
@@ -29,7 +30,7 @@ sub new {
 	open my $fh, '<', $self->{dict} or die "$!\n";
 	while (<$fh>) {
 	   chomp;
-	   next unless /^[$key]\w+$/;
+	   next unless /^[$key]\w+$/i;
 	   # next unless /^[poe]\w+$/;
 	   push @{ $self->{words}->{ substr($_,0,1) } }, $_;
 	}
