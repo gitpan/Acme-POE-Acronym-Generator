@@ -1,6 +1,9 @@
 Acme::POE::Acronym::Generator
 =============================
 
+1.03	Wed Jul 25 11:01:56 BST 2007
+	- Fixed abstract_from in Makefile.PL;
+
 1.02	Mon May 14 14:08:47 BST 2007
 	- Added a few more sanity checks for given 'key';
 
