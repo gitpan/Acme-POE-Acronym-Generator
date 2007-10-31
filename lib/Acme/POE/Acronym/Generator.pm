@@ -4,7 +4,7 @@ use strict;
 use Math::Random;
 use vars qw($VERSION);
 
-$VERSION = '1.03';
+$VERSION = '1.04';
 
 sub new {
   my $package = shift;
