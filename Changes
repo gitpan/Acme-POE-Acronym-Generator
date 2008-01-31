@@ -1,6 +1,9 @@
 Acme::POE::Acronym::Generator
 =============================
 
+1.06	Thu Jan 31 08:58:54 GMT 2008
+	- Made some adjustments so this should work on perl-5.5.5 
+
 1.04	Wed Oct 31 12:49:51 GMT 2007
 	- Updated Module::Install to 0.68;
 

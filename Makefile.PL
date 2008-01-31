@@ -6,4 +6,5 @@ abstract_from 'lib/Acme/POE/Acronym/Generator.pm';
 license 'perl';
 build_requires 'Test::More' => 0.47;
 requires 'Math::Random' => 0.69;
+requires 'warnings::compat' => 0 if $] < 5.006;
 WriteAll();

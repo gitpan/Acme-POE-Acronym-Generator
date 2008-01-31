@@ -1,10 +1,11 @@
 package Acme::POE::Acronym::Generator;
 
 use strict;
+use warnings;
 use Math::Random;
 use vars qw($VERSION);
 
-$VERSION = '1.04';
+$VERSION = '1.06';
 
 sub new {
   my $package = shift;
@@ -27,14 +28,14 @@ sub new {
 	return $self;
   }
   if ( -e $opts{dict} ) {
-	open my $fh, '<', $self->{dict} or die "$!\n";
-	while (<$fh>) {
+	open FH, "< $self->{dict}" or die "$!\n";
+	while (<FH>) {
 	   chomp;
 	   next unless /^[$key]\w+$/i;
 	   # next unless /^[poe]\w+$/;
 	   push @{ $self->{words}->{ substr($_,0,1) } }, $_;
 	}
-	close $fh;
+	close FH;
   }
   else {
 	$self->{words} = 
@@ -66,6 +67,7 @@ Acme::POE::Acronym::Generator - Generate random POE acronyms.
 =head1 SYNOPSIS
 
   use strict;
+  use warnings;
   use Acme::POE::Acronym::Generator;
 
   my $poegen = Acme::POE::Acronym::Generator->new();

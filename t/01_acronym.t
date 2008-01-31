@@ -4,6 +4,7 @@ BEGIN { use_ok('Acme::POE::Acronym::Generator'); };
 my $poegen = Acme::POE::Acronym::Generator->new();
 isa_ok( $poegen, 'Acme::POE::Acronym::Generator' );
 my $string = $poegen->generate();
+diag($string);
 ok( $string, $string );
 my @list = $poegen->generate();
 ok( scalar @list == 3, join ' ', @list );

@@ -17,4 +17,4 @@ no_index:
     - t
 requires: 
   Math::Random: 0.69
-version: 1.04
+version: 1.06

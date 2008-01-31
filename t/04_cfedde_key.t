@@ -10,5 +10,6 @@ my $poegen = Acme::POE::Acronym::Generator->new( key => 'C1234    FEDDE' );
 isa_ok( $poegen, 'Acme::POE::Acronym::Generator' );
 my $string = $poegen->generate();
 ok( $string, $string );
+diag($string);
 my @list = $poegen->generate();
 ok( scalar @list == 6, join ' ', @list );
