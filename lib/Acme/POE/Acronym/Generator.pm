@@ -5,7 +5,7 @@ use warnings;
 use Math::Random;
 use vars qw($VERSION);
 
-$VERSION = '1.06';
+$VERSION = '1.08';
 
 sub new {
   my $package = shift;
@@ -53,7 +53,7 @@ sub generate {
   my $words = $self->{words};
   my @poe;
   push @poe, 
-	ucfirst( $words->{$_}->[ scalar random_uniform_integer(1,0,$#{ $words->{$_} } ) ] ) for ( @{$self->{poe}} );
+	ucfirst( $words->{$_}->[ scalar random_uniform_integer(1,0,scalar @{ $words->{$_} }-1 ) ] ) for ( @{$self->{poe}} );
   return wantarray ? @poe : join( ' ', @poe );
 }
 
