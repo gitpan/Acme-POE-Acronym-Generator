@@ -1,6 +1,9 @@
 Acme::POE::Acronym::Generator
 =============================
 
+1.10	Fri Mar 14 10:08:59 GMT 2008
+	- Moved author tests to xt/ 
+
 1.08	Thu Feb  7 14:30:47 GMT 2008
 	- Fiddled slightly with the randomisation malarky.
 

@@ -17,4 +17,7 @@ no_index:
     - t
 requires: 
   Math::Random: 0.69
-version: 1.08
+  strict: 0
+  vars: 0
+tests: t/*.t xt/*.t
+version: 1.10

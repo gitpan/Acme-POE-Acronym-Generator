@@ -1,6 +1,7 @@
 Changes
 examples/synopsis.pl
 inc/Module/Install.pm
+inc/Module/Install/AuthorTests.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
 inc/Module/Install/Fetch.pm
@@ -18,6 +19,6 @@ t/01_acronym.t
 t/02_fakedict.t
 t/03_wordlist.t
 t/04_cfedde_key.t
-t/99_pod.t
-t/99_pod_coverage.t
-t/99_test_kwalitee.t
+xt/99_pod.t
+xt/99_pod_coverage.t
+xt/99_test_kwalitee.t
