@@ -21,4 +21,4 @@ requires:
   strict: 0
   vars: 0
 tests: 't/*.t xt/*.t'
-version: 1.12
+version: 1.14

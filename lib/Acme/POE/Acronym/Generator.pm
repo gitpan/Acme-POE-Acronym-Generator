@@ -5,7 +5,7 @@ use warnings;
 use Math::Random;
 use vars qw($VERSION);
 
-$VERSION = '1.12';
+$VERSION = '1.14';
 
 sub new {
   my $package = shift;

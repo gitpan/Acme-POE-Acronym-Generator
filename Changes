@@ -1,6 +1,10 @@
 Acme::POE::Acronym::Generator
 =============================
 
+1.14	Tue May  6 15:20:15 BST 2008
+	- Removed kwalitee test
+	- Added license information
+
 1.10	Fri Mar 14 10:08:59 GMT 2008
 	- Moved author tests to xt/ 
 
