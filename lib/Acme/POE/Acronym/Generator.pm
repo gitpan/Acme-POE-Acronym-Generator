@@ -1,11 +1,13 @@
 package Acme::POE::Acronym::Generator;
+{
+  $Acme::POE::Acronym::Generator::VERSION = '1.20';
+}
+
+#ABSTRACT: Generate random POE acronyms.
 
 use strict;
 use warnings;
 use Math::Random;
-use vars qw($VERSION);
-
-$VERSION = '1.18';
 
 sub new {
   my $package = shift;
@@ -58,11 +60,18 @@ sub generate {
 }
 
 1;
+
 __END__
+
+=pod
 
 =head1 NAME
 
 Acme::POE::Acronym::Generator - Generate random POE acronyms.
+
+=head1 VERSION
+
+version 1.20
 
 =head1 SYNOPSIS
 
@@ -73,7 +82,7 @@ Acme::POE::Acronym::Generator - Generate random POE acronyms.
   my $poegen = Acme::POE::Acronym::Generator->new();
 
   for ( 1 .. 10 ) {
-    my $acronym = $poegen->generate(); 
+    my $acronym = $poegen->generate();
     print $acronym, "\n";
   }
 
@@ -108,26 +117,27 @@ Returns a shiny Acme::POE::Acronym::Generator object.
 
 =item C<generate>
 
-Takes no parameters. 
+Takes no parameters.
 
-In a scalar context, returns a string containing the acronym. 
+In a scalar context, returns a string containing the acronym.
 
 In a list context, returns the individual words of the acronym as a list.
 
 =back
 
-=head1 AUTHOR
-
-Chris C<BinGOs> Williams <chris@bingosnet.co.uk>
-
-=head1 LICENSE
-
-Copyright E<copy> Chris Williams
-
-This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
-
 =head1 SEE ALSO
 
 L<http://poe.perl.org/?What_POE_Is>
+
+=head1 AUTHOR
+
+Chris Williams <chris@bingosnet.co.uk>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Chris Williams.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
